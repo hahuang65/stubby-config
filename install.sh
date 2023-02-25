@@ -6,8 +6,6 @@ if [ $(uname) = "Linux" ]; then
   sudo cp -f "${PWD}/config" "/etc/stubby/stubby.yml"
   sudo cp -f "${PWD}/resolv.conf" "/etc/resolv.conf"
 
-  sudo chattr +i /etc/resolv.conf
-
-  systemctl enable stubby.service
-  systemctl start stubby.service
+  sudo systemctl enable stubby.service
+  sudo systemctl start stubby.service
 fi
